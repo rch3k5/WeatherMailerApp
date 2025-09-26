@@ -27,7 +27,7 @@ jobs:
       - name: Recreate credential files from secrets
         run: |
           echo "${{ secrets.CREDENTIALS_JSON }}" > credentials.json
-          echo "${{ secrets.TOKEN_JSON }}" > token.json
+          echo "${{ secrets.TOKEN_JSON }}" | base64 --decode > token.json
       
       # Step 4: Installs the Python libraries your script needs.
       - name: Install dependencies
