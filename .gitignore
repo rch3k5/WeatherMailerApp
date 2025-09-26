@@ -1,0 +1,4 @@
+Ignore Google credential files
+These files contain sensitive information and should never be committed to the repository.
+credentials.json
+token.json
