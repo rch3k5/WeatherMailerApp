@@ -18,8 +18,10 @@ jobs:
           python-version: '3.10'
 
       # --- DEBUGGING STEP ---
-      - name: Check secret length
-        run: echo "The TOKEN_JSON secret is ${{ length(secrets.TOKEN_JSON) }} characters long."
+      - name: Check secret character count
+        run: |
+          echo "The TOKEN_JSON secret has this many characters:"
+          echo -n "${{ secrets.TOKEN_JSON }}" | wc -c
       # --- END OF STEP ---
 
       - name: Recreate credential files from secrets
