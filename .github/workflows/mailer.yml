@@ -35,4 +35,4 @@ jobs:
 
       # Step 5: Runs your script to send the email.
       - name: Run the python script
-        run: python gardening_weather_mailer.py
+        run: python weather_report.py
