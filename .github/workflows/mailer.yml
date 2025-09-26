@@ -17,10 +17,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      # --- NEW DEBUGGING STEP ---
+      # --- DEBUGGING STEP ---
       - name: Check secret length
-        run: echo "The TOKEN_JSON secret is ${{ nchar(secrets.TOKEN_JSON) }} characters long."
-      # --- END OF NEW STEP ---
+        run: echo "The TOKEN_JSON secret is ${{ length(secrets.TOKEN_JSON) }} characters long."
+      # --- END OF STEP ---
 
       - name: Recreate credential files from secrets
         run: |
