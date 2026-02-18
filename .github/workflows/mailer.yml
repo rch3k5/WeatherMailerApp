@@ -2,7 +2,7 @@ name: Send Gardening Weather Report
 
 on:
   schedule:
-    - cron: '0 10 * * 0,1,3,4,5'
+    - cron: '0 10 * * 0,4'
   workflow_dispatch:
 
 jobs:
