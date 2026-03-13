@@ -5,6 +5,9 @@ on:
     - cron: '0 10 * * 0,4'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
+
 jobs:
   build-and-send:
     runs-on: ubuntu-latest
